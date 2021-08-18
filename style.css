@@ -42,7 +42,7 @@ body{
     
 }
 .active{
-    background-color: red;
+    background-color:rgb(51, 51, 51);
 }
 #inputs{
     display: flex;
