@@ -17,10 +17,6 @@ function getInputValue(){
 
 
 
-
-
-
-
 function createGrid(number) {
     let area = number * number;
     for (let index = 0; index < area; index++) {
@@ -40,31 +36,21 @@ function createGrid(number) {
 function clearGrid() {
   
         const cells = document.querySelectorAll(".gridItem");
-        
 
-        cells.forEach(element => clearGridAction(element));
+        cells.forEach((element)=> {
+            gridContainer.removeChild(element);
+        });
 
     }
- function clearGridAction(element){
-     gridContainer.removeChild(element);
- }   
-    
 
-
-    
-
-
-
-
-
-function clear(element) {
-    element.classList.remove("active");
-    
-}
+  
 const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click",function () {
     const grids = document.querySelectorAll(".active");
-    grids.forEach(element => clear(element));
+    grids.forEach((element)=>{
+        element.classList.remove("active");
+
+    });
     
 });
 
