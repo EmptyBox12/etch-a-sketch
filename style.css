@@ -1,12 +1,29 @@
 body,html{
     width: 100%;
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 body{
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: wheat;
+    justify-content: space-between;
 }
+#top{
+    display: flex;
+    font-weight: bold;
+    font-size: larger;
+    background-color:thistle;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-bottom: 20px;
+    
+}
+
 
 #gridContainer{
     display: grid;
@@ -14,12 +31,50 @@ body{
     width: 75vh;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    border: darkred solid 15px;
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: whitesmoke;
     
 }
 .gridItem{
     border: black solid 1px;
-    padding: 1em;
+    
 }
 .active{
     background-color: red;
+}
+#inputs{
+    display: flex;
+
+}
+#clear{
+    background-color: lightcyan;
+    font-size: large;
+    width: 10vh;
+    font-weight: bold;
+    border-width: 3px;
+    
+}
+#clear:hover{
+    filter: brightness(0.94);
+   
+}
+#size{
+    width: 40vh;
+    height: 4vh;
+    margin-left: 5px;
+    
+}
+#createGrid{
+    margin-left: 2px;
+    background-color: lightblue;
+    font-size: large;
+    font-weight: bold;
+    border-width: 3px;
+}
+#createGrid:hover{
+    filter: brightness(0.94);
+
+
 }

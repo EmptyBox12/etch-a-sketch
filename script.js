@@ -1,5 +1,21 @@
 
 const gridContainer = document.querySelector("#gridContainer");
+createGrid(16);
+
+
+
+function getInputValue(){
+    
+    const size = parseInt(document.querySelector("#size").value);
+    clearGrid();
+    gridContainer.style.cssText = `grid-template-columns: repeat(${size}, 1fr);  grid-template-rows: repeat(${size}, 1fr);`;
+    
+    createGrid(size);
+    
+    
+}
+
+
 
 
 
@@ -21,9 +37,25 @@ function createGrid(number) {
     }
 
 }
+function clearGrid() {
+  
+        const cells = document.querySelectorAll(".gridItem");
+        
+
+        cells.forEach(element => clearGridAction(element));
+
+    }
+ function clearGridAction(element){
+     gridContainer.removeChild(element);
+ }   
+    
 
 
-createGrid(16);
+    
+
+
+
+
 
 function clear(element) {
     element.classList.remove("active");
